@@ -1,5 +1,20 @@
 require File.expand_path(File.dirname(__FILE__) + '/neo')
 
+class DiceSet 
+
+  def values
+    @values
+  end
+
+  def roll(num_dice)
+    @values = Array.new
+
+    for roll in 0...num_dice
+      @values.push(rand(1..6))
+    end
+  end
+end
+
 # Implement a DiceSet Class here:
 #
 # class DiceSet
